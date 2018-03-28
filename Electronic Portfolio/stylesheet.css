@@ -145,8 +145,21 @@
       position: relative;
       top: 410px;
   }
- #img2 {
+
+  #img2 {
       margin-right: 4px;
       position: relative;
       top: 310px;
+  }
+
+  #img3 {
+      margin-right: 4px;
+      position: relative;
+      top: 450px;
+  }
+
+  #img4 {
+      margin-right: 4px;
+      position: relative;
+      top: 450px;
   }
