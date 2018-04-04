@@ -51,7 +51,8 @@
   }
 
   .menu li:hover {
-      background-color: white;
+        background-color: white;
+        color: white;
   }
 
   h1 {
