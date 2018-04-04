@@ -50,11 +50,6 @@
       color: #ffffff;
   }
 
-  .menu li:hover {
-        background-color: white;
-        color: white;
-  }
-
   h1 {
       font-family: 'Fjalla One', sans-serif;
       font-size: 45px;
