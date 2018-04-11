@@ -16,7 +16,7 @@
     }
 
     .footer {
-        position: fixed;
+        position: relative;
         background-color: #3b3a30;
         color: white;
         padding: 15px;
