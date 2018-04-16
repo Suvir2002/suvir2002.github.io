@@ -126,3 +126,14 @@
     h2 {
         font-size: 26px;
     }
+
+    .tips {
+        text-decoration: none;
+        color: black;
+
+    }
+
+    .tips:hover {
+        text-decoration: none;
+        color: blue;
+    }
