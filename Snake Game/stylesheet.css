@@ -1,0 +1,24 @@
+h1 {
+    font-family: 'Work Sans', sans-serif;
+    text-decoration: underline;
+    font-size: 37px;
+}
+
+h2 {
+    margin-bottom: -0.5%;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+}
+
+li {
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 0.1%;
+}
+
+footer {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 650;
+    position: fixed;
+    bottom: 3%;
+    left: 1%;
+}
