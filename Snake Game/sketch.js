@@ -37,10 +37,6 @@ function draw() {
     rect(food.x, food.y, scl, scl);
 }
 
-
-
-
-
 function keyPressed() {
     if (keyCode === UP_ARROW) {
         s.dir(0, -1);
