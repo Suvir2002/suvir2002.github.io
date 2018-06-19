@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>House Of Sher!</title>
+    <link href="https://fonts.googleapis.com/css?family=Eater" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("https://i.imgur.com/RmImVt6.jpg");
+            background-repeat: no-repeat;
+            background-color: black;
+            background-size: cover;
+        }
+
+        h1 {
+            color: #D3D3D3;
+            font-family: 'Eater', cursive;
+            font-size: 40px;
+        }
+
+    </style>
+
+    <script>
+        let lockpick = false;
+        let crowbar = false;
+        let manual = false;
+
+        //Game Starts Here
+        function gameStart() {
+            alert("Welcome to The House Of Sher!");
+            let name = prompt("What would you like to be called?");
+            alert("Welcome " + name + ", nice to meet you");
+            let originalChoice = prompt("Are you ready to enter The House of Sher? YES, NO").toUpperCase();
+            switch (originalChoice) {
+                case "YES":
+                    alert("Amazing! Let us begin!");
+                    mainStart();
+                    break;
+                case "NO":
+                    alert("Come back when you're ready!")
+                    gameStart();
+                default:
+                    alert("I don't understand " + originalChoice + " as an input. Please try again.");
+                    gameStart();
+            }
+        }
+
+        function mainStart() {
+            alert("Welcome" + name + " you have now entered the dark, gloomy house of Sher and the door has locked behind you! To escape you will need to find a lockpick, crowbar and an instruction manual.");
+            mainRoom();
+        }
+
+        function mainRoom() {
+            let firstChoice = prompt("From here you have a few options on where you would like to go. BASEMENT, KITCHEN, ATTIC, BATHROOM, LIVING ROOM").toUpperCase();
+            switch (firstChoice) {
+                case "BASEMENT":
+                    alert("You've decided to enter the Basement");
+                    basement();
+                    break;
+                case "KITCHEN":
+                    alert("You have now entered the kitchen.")
+                    kitchen();
+                    break;
+                case "ATTIC":
+                    alert("Add Something")
+                    attic();
+                    break;
+                case "BATHROOM":
+                    alert("Add Something")
+                    bathroom();
+                    break;
+                case "LIVING ROOM":
+                    alert("Add Something")
+                    livingRoom();
+                default:
+                    alert("I don't understand " + firstChoice + " as an input. Please try again.");
+                    mainRoom();
+            }
+        }
+
+        function basement() { //comes from basemnt path. f-mainRoom
+            alert("You see the outline of a figure in the background!")
+            if (confirm("Do you want to confront them?")) {
+                alert("You walk up to him and realise that he looks dead inside, he pulls out a sword and kills you.");
+                alert("Restarting the game, all progress lost!");
+                mainRoom();
+            } else {
+                let secondChoice = prompt("You decide not to confront him and you see a shining object under the rug! INVESTIGATE, LEAVE ROOM").toUpperCase();
+                switch (secondChoice) {
+                    case "INVESTIGATE":
+                        (confirm("You pick up the rug and find a silver crowbar! Do you want to take it?"));
+                        crowbar = true;
+                        alert("You picked up the crowbar and walked back to the landing.")
+                        mainRoom();
+                        break;
+                    case "LEAVE ROOM":
+                        alert("You leave the Basement")
+                        mainRoom();
+                    default:
+                        alert("I don't understand " + secondChoice + " as an input. Please try again.");
+                        basement();
+                }
+            }
+        }
+
+        function kitchen() { //comes from kitchen path. F-mainRoom
+            alert("Add Something");
+        }
+
+        function attic() { //comes from attic path. F-mainRoom
+            alert("Add Something");
+
+        }
+
+        function bathroom() { //comes from bathroom path. F-mainRoom
+            alert("Add Something");
+
+        }
+
+        function livingRoom() { //comes from livingRoom path.  F-mainRoom
+            alert("Add Something");
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1>
+            Haunted House of Sher
+        </h1>
+    </center>
+    <center>
+        <button onclick="gameStart()">Start Game!</button>
+    </center>
+</body>
+
+</html>
