@@ -37,7 +37,7 @@
                     mainStart();
                     break;
                 case "NO":
-                    alert("Come back when you're ready!")
+                    alert("Come back when you're ready!");
                     gameStart();
                 default:
                     alert("I don't understand " + originalChoice + " as an input. Please try again.");
@@ -46,32 +46,36 @@
         }
 
         function mainStart() {
-            alert("Welcome" + name + " you have now entered the dark, gloomy house of Sher and the door has locked behind you! To escape you will need to find a lockpick, crowbar and an instruction manual.");
+            alert("Welcome" + name + " you have now entered the dark and gloomy house of Sher, the reinforced door has locked behind you! To escape you will need to find a lockpick, crowbar and an instruction manual.");
             mainRoom();
         }
 
         function mainRoom() {
-            let firstChoice = prompt("From here you have a few options on where you would like to go. BASEMENT, KITCHEN, ATTIC, BATHROOM, LIVING ROOM").toUpperCase();
+            let firstChoice = prompt("From here you have a few options on where you would like to go. BASEMENT, KITCHEN, ATTIC, BATHROOM, LIVING ROOM, DOOR").toUpperCase();
             switch (firstChoice) {
                 case "BASEMENT":
                     alert("You've decided to enter the Basement");
                     basement();
                     break;
                 case "KITCHEN":
-                    alert("You have now entered the kitchen.")
+                    alert("You have now entered the kitchen.");
                     kitchen();
                     break;
                 case "ATTIC":
-                    alert("Add Something")
+                    alert("Add Something");
                     attic();
                     break;
                 case "BATHROOM":
-                    alert("Add Something")
+                    alert("Add Something");
                     bathroom();
                     break;
                 case "LIVING ROOM":
-                    alert("Add Something")
+                    alert("Add Something");
                     livingRoom();
+                    break;
+                case "DOOR":
+                    alert("Add Something");
+                    door();
                 default:
                     alert("I don't understand " + firstChoice + " as an input. Please try again.");
                     mainRoom();
@@ -79,7 +83,7 @@
         }
 
         function basement() { //comes from basemnt path. f-mainRoom
-            alert("You see the outline of a figure in the background!")
+            alert("You see the outline of a figure in the background!");
             if (confirm("Do you want to confront them?")) {
                 alert("You walk up to him and realise that he looks dead inside, he pulls out a sword and kills you.");
                 alert("Restarting the game, all progress lost!");
@@ -90,11 +94,11 @@
                     case "INVESTIGATE":
                         (confirm("You pick up the rug and find a silver crowbar! Do you want to take it?"));
                         crowbar = true;
-                        alert("You picked up the crowbar and walked back to the landing.")
+                        alert("You picked up the crowbar and walked back to the landing.");
                         mainRoom();
                         break;
                     case "LEAVE ROOM":
-                        alert("You leave the Basement")
+                        alert("You leave the Basement");
                         mainRoom();
                     default:
                         alert("I don't understand " + secondChoice + " as an input. Please try again.");
@@ -121,6 +125,10 @@
             alert("Add Something");
 
         }
+        
+        function door() {
+            alert("Add Something");
+        }
 
     </script>
 </head>
@@ -130,8 +138,7 @@
         <h1>
             Haunted House of Sher
         </h1>
-    </center>
-    <center>
+        
         <button onclick="gameStart()">Start Game!</button>
     </center>
 </body>
