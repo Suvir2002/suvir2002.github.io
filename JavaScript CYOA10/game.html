@@ -25,9 +25,8 @@
         let crowbar = false;
         let manual = false;
 
-        //Game Starts Here
-        function gameStart() {
-            alert("Welcome to The House Of Sher!");
+        function gameStart() { //Game Officially Starts Here
+            alert("Welcome to The Haunted House Of Sher!");
             let name = prompt("What would you like to be called?");
             alert("Welcome " + name + ", nice to meet you");
             let originalChoice = prompt("Are you ready to enter The House of Sher? YES, NO").toUpperCase();
@@ -45,12 +44,12 @@
             }
         }
 
-        function mainStart() {
+        function mainStart() { //locked in house. Start playing
             alert("Welcome" + name + " you have now entered the dark and gloomy house of Sher, the reinforced door has locked behind you! To escape you will need to find a lockpick, crowbar and an instruction manual.");
             mainRoom();
         }
 
-        function mainRoom() {
+        function mainRoom() { //main room or landing of house where you can decide to go.
             let firstChoice = prompt("From here you have a few options on where you would like to go. BASEMENT, KITCHEN, ATTIC, BATHROOM, LIVING ROOM, DOOR").toUpperCase();
             switch (firstChoice) {
                 case "BASEMENT":
@@ -82,7 +81,7 @@
             }
         }
 
-        function basement() { //comes from basemnt path. f-mainRoom
+        function basement() { //comes from basemnt path. f-mainRoom.
             alert("You see the outline of a figure in the background!");
             if (confirm("Do you want to confront them?")) {
                 alert("You walk up to him and realise that he looks dead inside, he pulls out a sword and kills you.");
@@ -92,10 +91,7 @@
                 let secondChoice = prompt("You decide not to confront him and you see a shining object under the rug! INVESTIGATE, LEAVE ROOM").toUpperCase();
                 switch (secondChoice) {
                     case "INVESTIGATE":
-                        (confirm("You pick up the rug and find a silver crowbar! Do you want to take it?"));
-                        crowbar = true;
-                        alert("You picked up the crowbar and walked back to the landing.");
-                        mainRoom();
+                        investigate();
                         break;
                     case "LEAVE ROOM":
                         alert("You leave the Basement");
@@ -125,9 +121,21 @@
             alert("Add Something");
 
         }
-        
-        function door() {
+
+        function door() { //exit or completion of the game. F-mainRoom 
             alert("Add Something");
+        }
+
+        function investigate() { //comes from investigation of crowbar. F-basement
+            if (confirm("You pick up the rug and find a silver crowbar! Do you want it?")) {
+                crowbar = true;
+                alert("You pick up the crowbar and walk back to the landing.");
+                mainRoom();
+            } else {
+                alert("You may regret this later but you leave the crowbar where it is for now and walk back to the landing empty handed!");
+                crowbar = false;
+                mainRoom();
+            }
         }
 
     </script>
@@ -138,7 +146,7 @@
         <h1>
             Haunted House of Sher
         </h1>
-        
+
         <button onclick="gameStart()">Start Game!</button>
     </center>
 </body>
