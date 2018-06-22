@@ -150,7 +150,7 @@
                 case "OPEN":
                     alert("You decide to open the fridge and you see half a watermelon with '6a' engraved on it.")
                     alert("You then walk back to the front of the house.")
-                    mainStart();
+                    mainRoom();
                     break;
                 case "LEAVE ROOM":
                     alert("You leave the Kitchen and head back to the front of the house.");
@@ -200,7 +200,7 @@
                     mainRoom();
                 default:
                     alert("I don't understand " + seventhChoice + " as an input. Please try again.");
-                    kitchen();
+                    safeOpen();
             }
         }
 
@@ -291,7 +291,7 @@
                     mainRoom();
                 default:
                     alert("I don't understand " + twelvethChoice + " as an input. Please try again.");
-                    livingRoom();
+                    drawerBottom();
             }
 
         }
@@ -322,6 +322,7 @@
             }
         }
 
+        //The code is 61879
     </script>
 </head>
 
