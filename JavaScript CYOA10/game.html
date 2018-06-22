@@ -3,6 +3,7 @@
 
 <head>
     <title>House Of Sher!</title>
+    <!-- By Suvir Sidhu -->
     <link href="https://fonts.googleapis.com/css?family=Eater" rel="stylesheet">
     <style>
         body {
@@ -23,7 +24,6 @@
     <script>
         let lockpick = false;
         let crowbar = false;
-        let manual = false;
 
         function gameStart() { //Game Officially Starts Here
             alert("Welcome to The Haunted House Of Sher!");
@@ -44,12 +44,14 @@
             }
         }
 
-        function mainStart() { //locked in house. Start playing
-            alert("Welcome" + name + " you have now entered the dark and gloomy house of Sher, the reinforced door has locked behind you! To escape you will need to find a lockpick, crowbar and an instruction manual.");
+        function mainStart() { //locked in house. After Death
+            crowbar = false;
+            lockpick = false;
+            alert("Welcome, you have now entered the dark and gloomy house of Sher, the reinforced door has locked behind you! To escape you will need to find a lockpick, crowbar and an instruction manual.");
             mainRoom();
         }
 
-        function mainRoom() { //main room or landing of house where you can decide to go.
+        function mainRoom() { //main room or front of the house where you can decide to go.
             let firstChoice = prompt("From here you have a few options on where you would like to go. BASEMENT, KITCHEN, ATTIC, BATHROOM, LIVING ROOM, DOOR").toUpperCase();
             switch (firstChoice) {
                 case "BASEMENT":
@@ -57,23 +59,22 @@
                     basement();
                     break;
                 case "KITCHEN":
-                    alert("You have now entered the kitchen.");
+                    alert("You have now entered the Kitchen and all the lights start to flicker.");
                     kitchen();
                     break;
                 case "ATTIC":
-                    alert("Add Something");
+                    alert("You see a trap door in the roof and use it to enter the Attic.");
                     attic();
                     break;
                 case "BATHROOM":
-                    alert("Add Something");
+                    alert("You decide to enter the Bathroom.");
                     bathroom();
                     break;
                 case "LIVING ROOM":
-                    alert("Add Something");
+                    alert("You decide to enter the Living Room.");
                     livingRoom();
                     break;
                 case "DOOR":
-                    alert("Add Something");
                     door();
                 default:
                     alert("I don't understand " + firstChoice + " as an input. Please try again.");
@@ -86,7 +87,7 @@
             if (confirm("Do you want to confront them?")) {
                 alert("You walk up to him and realise that he looks dead inside, he pulls out a sword and kills you.");
                 alert("Restarting the game, all progress lost!");
-                mainRoom();
+                mainStart();
             } else {
                 let secondChoice = prompt("You decide not to confront him and you see a shining object under the rug! INVESTIGATE, LEAVE ROOM").toUpperCase();
                 switch (secondChoice) {
@@ -104,35 +105,218 @@
         }
 
         function kitchen() { //comes from kitchen path. F-mainRoom
-            alert("Add Something");
+            let thirdChoice = prompt("You look around and see a sandwhich laying on kitchen counter, a big steel drum and a refrigerator. Which one would you like to investigate. SANDWHICH, DRUM, REFRIGERATOR").toUpperCase();
+            switch (thirdChoice) {
+                case "SANDWHICH":
+                    sandwhich();
+                    break;
+                case "DRUM":
+                    drum();
+                    break;
+                case "REFRIGERATOR":
+                    refrigerator();
+                default:
+                    alert("I don't understand " + thirdChoice + " as an input. Please try again.");
+                    kitchen();
+            }
+        }
+
+        function sandwhich() { //comes from investigate kitchen. F-kitchen
+            alert("You decide to go get the sandwhich because you're hungry, you take a huge bite, clutch your throat and then you collapase and die. The sandwhich had arsenic in it.")
+            alert("Restarting the game, all progress lost!");
+            mainStart();
+        }
+
+        function drum() { //comes from investigate kitchen. F-kitchen
+            let fourthChoice = prompt("You decide to investigate the big steel drum next to the garbage can, it appears to be heavy. Would you like to investigate further or leave? INVESTIGATE, LEAVE ROOM").toUpperCase();
+            switch (fourthChoice) {
+                case "INVESTIGATE":
+                    alert("You decide to shake the drum to see if their is anything loose inside because the top is sealed shut. The drum explodes and you die!")
+                    alert("Restarting the game, all progress lost!")
+                    mainStart();
+                    break;
+                case "LEAVE ROOM":
+                    alert("You leave the Kitchen and head back to the front of the house.");
+                    mainRoom;
+                default:
+                    alert("I don't understand " + fourthChoice + " as an input. Please try again.");
+                    kitchen();
+            }
+        }
+
+        function refrigerator() { //comes from investigate kitchen. F-kitchen
+            let fifthChoice = prompt("You go to the normal looking refrigerator in the normal looking kitchen, would you like to open it? OPEN, LEAVE ROOM").toUpperCase();
+            switch (fifthChoice) {
+                case "OPEN":
+                    alert("You decide to open the fridge and you see half a watermelon with '6a' engraved on it.")
+                    alert("You then walk back to the front of the house.")
+                    mainStart();
+                    break;
+                case "LEAVE ROOM":
+                    alert("You leave the Kitchen and head back to the front of the house.");
+                    mainRoom();
+                default:
+                    alert("I don't understand " + fifthChoice + " as an input. Please try again.");
+                    kitchen();
+            }
         }
 
         function attic() { //comes from attic path. F-mainRoom
-            alert("Add Something");
+            let sixthChoice = prompt("Upon entering the attic, you see a safe. Would you like to attempt to open it or leave? OPEN, LEAVE ROOM").toUpperCase();
+            switch (sixthChoice) {
+                case "OPEN":
+                    open();
+                    break;
+                case "LEAVE ROOM":
+                    alert("You leave the Attic and head back to the front of the house.");
+                    mainRoom();
+                default:
+                    alert("I don't understand " + sixthChoice + " as an input. Please try again.");
+                    kitchen();
+            }
+        }
 
+        function open() { //where you open safe.
+            var safeCode = prompt("The safe has a 5 digit combination lock, please enter the code.");
+            if (safeCode === "61879") {
+                alert("You have successfully opened the safe!")
+                safeOpen();
+            } else {
+                alert("Come back when you have the correct code!")
+                mainRoom();
+            }
+        }
+
+        function safeOpen() { //where you read manual.
+            let seventhChoice = prompt("Inside you see a lockpick. Do you want to take it or leave. TAKE, LEAVE ROOM").toUpperCase();
+            switch (seventhChoice) {
+                case "TAKE":
+                    alert("Congratulations, you have found the lockpick! You then walk back to the front of the house.");
+                    lockpick = true;
+                    mainRoom();
+                    break;
+                case "LEAVE ROOM":
+                    alert("You leave the Attic and head back to the front of the house.");
+                    mainRoom();
+                default:
+                    alert("I don't understand " + seventhChoice + " as an input. Please try again.");
+                    kitchen();
+            }
         }
 
         function bathroom() { //comes from bathroom path. F-mainRoom
-            alert("Add Something");
-
+            let eighthChoice = prompt("Do you want to turn the lights on. YES, NO").toUpperCase();
+            switch (eighthChoice) {
+                case "YES":
+                    alert("Once the lights are on you turn around and on the mirror you see '9e' written in lipstick.");
+                    mainRoom();
+                    break;
+                case "NO":
+                    alert("You decide not to turn the lights on, you walk forward, the floor beneath you collapses and you fall to your death!");
+                    alert("Restarting the game, all progress lost!");
+                    mainStart();
+                default:
+                    alert("I don't understand " + eighthChoice + " as an input. Please try again.");
+                    bathroom();
+            }
         }
 
         function livingRoom() { //comes from livingRoom path.  F-mainRoom
-            alert("Add Something");
+            let ninthChoice = prompt("On the couch you see a skeleton, its arm pointing towards a chest of drawers. Do you want to interact with the skeleton or go to the chest of drawers. INTERACT, DRAWERS").toUpperCase();
+            switch (ninthChoice) {
+                case "INTERACT":
+                    alert("The skeleton stands up and its eyes start to glow. A beam of light shoots out and vaporizes you!");
+                    alert("Restarting the game, all progress lost!")
+                    mainStart();
+                    break;
+                case "DRAWERS":
+                    alert("You walk towards the chest of drawers.");
+                    drawers();
+                default:
+                    alert("I don't understand " + ninthChoice + " as an input. Please try again.");
+                    livingRoom();
+            }
+
+        }
+
+        function drawers() { //comes from livingroom. F-livingroom
+            let tenthChoice = prompt("Do you want to open the top, middle or bottom drawer. TOP, MIDDLE, BOTTOM").toUpperCase();
+            switch (tenthChoice) {
+                case "TOP":
+                    drawerTop();
+                    break;
+                case "MIDDLE":
+                    alert("You decide to open the middle drawer, it is empty.")
+                    alert("You step back to try again.")
+                    drawers();
+                    break;
+                case "BOTTOM":
+                    alert("You decide to open the bottom drawer.")
+                    drawerBottom();
+                default:
+                    alert("I don't understand " + tenthChoice + " as an input. Please try again.");
+                    drawers();
+            }
+
+        }
+
+        function drawerTop() { //comes from drawers. F-livingRoom
+            let eleventhChoice = prompt("You open the top drawer and see a small wooden box. Do you want to open it? OPEN, BACK OFF").toUpperCase();
+            switch (eleventhChoice) {
+                case "OPEN":
+                    alert("You open the box, small poisonous fumes emanate and you die!")
+                    alert("Restarting the game, all progress lost!")
+                    mainStart();
+                    break;
+                case "BACK OFF":
+                    alert("You step back to rethink your choice.")
+                    drawers();
+                default:
+                    alert("I don't understand " + eleventhChoice + " as an input. Please try again.");
+                    drawerTop();
+            }
+
+        }
+
+        function drawerBottom() { //comes from drawers. F-livingRoom
+            let twelvethChoice = prompt("Once open you see a manual inside, do you want to read it. READ, LEAVE ROOM").toUpperCase();
+            switch (twelvethChoice) {
+                case "READ":
+                    alert("On the inside of the front cover, you see '1b, 8c, 7d' written in pen.")
+                    alert("You then walk back to the front of the house.")
+                    mainRoom();
+                    break;
+                case "LEAVE ROOM":
+                    alert("You leave the Living Room and head back to the front of the house.");
+                    mainRoom();
+                default:
+                    alert("I don't understand " + twelvethChoice + " as an input. Please try again.");
+                    livingRoom();
+            }
 
         }
 
         function door() { //exit or completion of the game. F-mainRoom 
-            alert("Add Something");
+            alert("You walk towards the back door of the house attempting to escape.");
+            if (lockpick, crowbar === true) {
+                alert("With the help of the crowbar and lockpick you miraculously open the door!")
+                alert("Congratulations, you have escaped and won the game! Thank you for playing");
+                gameStart();
+            } else {
+                alert("You do not have all of the required items to open the door, come back when you're equiped!")
+                mainRoom();
+
+            }
         }
+
 
         function investigate() { //comes from investigation of crowbar. F-basement
             if (confirm("You pick up the rug and find a silver crowbar! Do you want it?")) {
                 crowbar = true;
-                alert("You pick up the crowbar and walk back to the landing.");
+                alert("You pick up the crowbar and walk back to the front of the house.");
                 mainRoom();
             } else {
-                alert("You may regret this later but you leave the crowbar where it is for now and walk back to the landing empty handed!");
+                alert("You may regret this later but you leave the crowbar where it is for now and walk back to the front of the house empty handed!");
                 crowbar = false;
                 mainRoom();
             }
