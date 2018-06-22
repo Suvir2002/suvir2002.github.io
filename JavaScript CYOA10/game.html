@@ -131,8 +131,8 @@
             let fourthChoice = prompt("You decide to investigate the big steel drum next to the garbage can, it appears to be heavy. Would you like to investigate further or leave? INVESTIGATE, LEAVE ROOM").toUpperCase();
             switch (fourthChoice) {
                 case "INVESTIGATE":
-                    alert("You decide to shake the drum to see if their is anything loose inside because the top is sealed shut. The drum explodes and you die!")
-                    alert("Restarting the game, all progress lost!")
+                    alert("You decide to shake the drum to see if their is anything loose inside because the top is sealed shut. The drum explodes and you die!");
+                    alert("Restarting the game, all progress lost!");
                     mainStart();
                     break;
                 case "LEAVE ROOM":
@@ -148,8 +148,8 @@
             let fifthChoice = prompt("You go to the normal looking refrigerator in the normal looking kitchen, would you like to open it? OPEN, LEAVE ROOM").toUpperCase();
             switch (fifthChoice) {
                 case "OPEN":
-                    alert("You decide to open the fridge and you see half a watermelon with '6a' engraved on it.")
-                    alert("You then walk back to the front of the house.")
+                    alert("You decide to open the fridge and you see half a watermelon with '6a' engraved on it.");
+                    alert("You then walk back to the front of the house.");
                     mainRoom();
                     break;
                 case "LEAVE ROOM":
@@ -179,10 +179,10 @@
         function open() { //where you open safe.
             var safeCode = prompt("The safe has a 5 digit combination lock, please enter the code.");
             if (safeCode === "61879") {
-                alert("You have successfully opened the safe!")
+                alert("You have successfully opened the safe!");
                 safeOpen();
             } else {
-                alert("Come back when you have the correct code!")
+                alert("Come back when you have the correct code!");
                 mainRoom();
             }
         }
@@ -226,7 +226,7 @@
             switch (ninthChoice) {
                 case "INTERACT":
                     alert("The skeleton stands up and its eyes start to glow. A beam of light shoots out and vaporizes you!");
-                    alert("Restarting the game, all progress lost!")
+                    alert("Restarting the game, all progress lost!");
                     mainStart();
                     break;
                 case "DRAWERS":
@@ -246,12 +246,12 @@
                     drawerTop();
                     break;
                 case "MIDDLE":
-                    alert("You decide to open the middle drawer, it is empty.")
-                    alert("You step back to try again.")
+                    alert("You decide to open the middle drawer, it is empty.");
+                    alert("You step back to try again.");
                     drawers();
                     break;
                 case "BOTTOM":
-                    alert("You decide to open the bottom drawer.")
+                    alert("You decide to open the bottom drawer.");
                     drawerBottom();
                 default:
                     alert("I don't understand " + tenthChoice + " as an input. Please try again.");
@@ -264,12 +264,12 @@
             let eleventhChoice = prompt("You open the top drawer and see a small wooden box. Do you want to open it? OPEN, BACK OFF").toUpperCase();
             switch (eleventhChoice) {
                 case "OPEN":
-                    alert("You open the box, small poisonous fumes emanate and you die!")
-                    alert("Restarting the game, all progress lost!")
+                    alert("You open the box, small poisonous fumes emanate and you die!");
+                    alert("Restarting the game, all progress lost!");
                     mainStart();
                     break;
                 case "BACK OFF":
-                    alert("You step back to rethink your choice.")
+                    alert("You step back to rethink your choice.");
                     drawers();
                 default:
                     alert("I don't understand " + eleventhChoice + " as an input. Please try again.");
@@ -282,8 +282,8 @@
             let twelvethChoice = prompt("Once open you see a manual inside, do you want to read it. READ, LEAVE ROOM").toUpperCase();
             switch (twelvethChoice) {
                 case "READ":
-                    alert("On the inside of the front cover, you see '1b, 8c, 7d' written in pen.")
-                    alert("You then walk back to the front of the house.")
+                    alert("On the inside of the front cover, you see '1b, 8c, 7d' written in pen.");
+                    alert("You then walk back to the front of the house.");
                     mainRoom();
                     break;
                 case "LEAVE ROOM":
@@ -299,11 +299,11 @@
         function door() { //exit or completion of the game. F-mainRoom 
             alert("You walk towards the back door of the house attempting to escape.");
             if (lockpick, crowbar === true) {
-                alert("With the help of the crowbar and lockpick you miraculously open the door!")
+                alert("With the help of the crowbar and lockpick you miraculously open the door!");
                 alert("Congratulations, you have escaped and won the game! Thank you for playing");
                 gameStart();
             } else {
-                alert("You do not have all of the required items to open the door, come back when you're equiped!")
+                alert("You do not have all of the required items to open the door, come back when you're equiped!");
                 mainRoom();
 
             }
