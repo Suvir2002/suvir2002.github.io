@@ -1,0 +1,478 @@
+body {
+  margin: 0;
+}
+body {
+  width:100%;
+}
+/*top */
+h1 {
+  font-family: Oswald;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 2px;
+}
+
+
+.main {
+  text-align: center;
+  background:url("http://i.yomyomf.com/wp-content/uploads/2016/06/25174520/best-indian-food-new-orleans.jpg") no-repeat fixed 0px -224pt;
+  background-size: cover;
+  z-index: 0;
+  height: 300px;
+  margin-top: -20pt;
+}
+
+.main .container {
+  position: relative;
+  top: 100px;
+}
+
+.main h1 {
+  font-family: Oswald;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  bottom: -70pt;
+  letter-spacing: 2px;
+}
+
+.main h2 {
+  color: #ecf0f1;
+  position: relative;
+  bottom: -55pt;
+  font-family: Oswald;
+  font-size: 30px;
+  text-shadow: 3px 3px 10px #000;
+}
+
+h2 {
+  text-align: center;
+  font-family: quicksand;v
+  font-size: 20px;
+  color: #fff;
+}
+/* Button */
+.btn {
+  position: relative;
+}
+
+#button {
+  postion: relative;
+  top: -266px;
+}
+
+.blink {
+  background-color: #eee;
+  color: #1c1c1c;
+  font-size: 20px;
+  padding: 8px 30px;
+  text-decoration: none;
+}
+
+a.blink:hover {
+  background: #f39c12;
+  background-position: center;
+  color:#FFF;
+}
+
+.main .btn {
+  background-color: #1c1c1c;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 30px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.btn:hover {
+  background: #00bfff;
+  background-position: center;
+  color:#000;
+}
+
+/* List */
+.list {
+    background-color: #2c3e50;
+    text-align: center;
+}
+.list ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    font-family: Raleway;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500pt;
+}
+
+.list li {
+    float: left;
+}
+
+.list li a {
+    display: block;
+    color: #FFF;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.feature {
+  text-align: center;
+  background: #7f8c8d;
+  background-size: cover;
+  z-index: 0;
+  height: 600px;
+}
+
+.feature h2 {
+  margin-top: -80pt;
+  color: #FFF;
+  padding: 20px 20px;
+  background-size: cover;
+  font-family: Raleway;
+  letter-spacing: 1px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.feature p {
+  color: #FFF;
+  padding: 20px 200px;
+  font-family: Quicksand;
+}
+
+.blnk h2 {
+  margin-top: -65pt;
+}
+
+.review {
+  background-color: #FFF;
+  padding: 20px 20px;
+  background-size: cover;
+  z-index: 0;
+  height: 200px;
+  text-align: center;
+}
+
+.review h3 {
+  text-align: center;
+  color: #171717;
+  font-size: 25px;
+  font-family: Raleway;
+  letter-spacing: 1px;
+}
+
+.review {
+  background-color: #e3e3e3;
+  background-size: cover;
+  height: 420pt;
+  margin: 0;
+}
+
+.review ul {
+  font-size: 15px;
+  font-family: Arial;
+  list-style-type: none;
+  background-color: #e3e3e3;
+  background-size: cover;
+}
+
+.review li {
+  position: relative;
+  text-align: center;
+}
+
+#review1 {
+  margin-top: 60pt;
+  text-align: center;
+  display: inline-block;
+  padding: 100pt;
+}
+
+
+#review2 {
+  margin-top: 10pt;
+  text-align: center;
+  display: inline-block;
+  padding: 100pt;
+}
+
+.block {
+  color: #fff;
+  padding: 100pt 43.2pt;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.block h3 {
+  font-size: 20px;
+  font-family: Oswald;
+  letter-spacing: 1px;
+  color: #FFF;
+  text-align: center;
+  text-shadow: #000000 4px 4px 10px;
+}
+
+.block p {
+  font-family: Quicksand;
+  font-size: 12px;
+  color: #FFF;
+  text-align: center;
+  text-shadow: 2px 2px 3px #000000;
+}
+.copyright {
+  background-color: #f2f2f2;
+  width: 100%;
+}
+
+.copyright p {
+  font-family: Quicksand;
+  font-size: 12px;
+  text-align: right;
+  background-color: #f2f2f2;
+  padding: 20px 20px;
+  margin-bottom: 0;
+  color: #141414;
+
+}
+
+.block1 {
+  background: url(https://bigapplecurry.files.wordpress.com/2012/11/istock_000019639558_medium.jpg) no-repeat 100% 0%;
+  display: inline-block;
+  background-size: cover;
+  border-style: solid;
+  border-color: #FFF;
+  border-left: 1px;
+  float: left;
+  text-align: left;
+  width: 33%;
+}
+
+.menu {
+  margin-top: 8pt;
+  padding:20px;
+  margin: 30pt;
+  position: relative;
+  margin: auto;
+  width: auto;
+}
+
+.expanding {
+  -webkit-transition:width 0.2s ease-in-out;
+  display:inline-block;
+  width: 25%;
+  height: 225px;
+  background-size: cover;
+  float: left;
+  margin-right: 6px;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.expanding:hover {
+  width: 47%;
+}
+
+.expanding p {
+  visibility: hidden;
+  opacity: 0;
+  font-family: Quicksand;
+  font-size: 12pt;
+  color: #FFF;
+  text-shadow: 2px 2px 3px #000000;
+  text-align: right;
+  padding: 10px;
+  -webkit-transition: opacity 0.5s ease-in-out;
+}
+
+.expanding:hover p {
+  visibility: visible;
+  margin-left: 70%;
+  opacity: 1;
+}
+
+.expanding h3 {
+  font-size: 20px;
+  font-family: Oswald;
+  letter-spacing: 1px;
+  color: #FFF;
+  text-align: center;
+  text-shadow: #000000 4px 4px 10px;
+}
+
+.containing {
+  text-align: center;
+  width: 100%;
+  pointer-events: none;
+  margin-left: 0;
+}
+
+.menu .containing {
+  pointer-events: none;
+}
+.menu .containing .expanding {
+  pointer-events: all;
+}
+
+
+.margin {
+  padding-right: 100px;
+  margin: 0;
+  margin-top: -250pt;
+}
+
+textarea {
+  font-family: Quicksand;
+  font-size: 12px;
+}
+
+.form {
+  text-align: center;
+}
+
+.usereviews {
+  text-align: left;
+  padding: 1px 20px;
+  margin-left: 20pt;
+  margin-right: 200pt;
+  background-color: #FFF;
+  box-shadow: 0.2px 0.2px 30px #343434;
+}
+
+.usereviews h3 {
+  font-size: 20px;
+  font-family: Quicksand;
+  position: relative;
+  margin-left: 100pt;
+  margin-top: -60pt;
+  margin-bottom: 50pt;
+
+}
+
+.usereviews p {
+  text-align: left;
+  font-size: 14px;
+  color: #000;
+  padding-left: 30pt;
+  padding-bottom: 35pt;
+  margin-top: -10pt;
+  margin-left: 70pt;
+  margin-top: -45pt;
+}
+
+.contact {
+  background: #FFF;
+  background-size: cover;
+  z-index: 0;
+  height: 700px;
+  margin-top: -20pt;
+}
+
+.contact p {
+  font-family: Calibri Light;
+  font-size: 20px;
+  text-align: center;
+  color: #000000;
+}
+
+.contact h3 {
+  font-family: Calibri Light;
+  font-size: 20px;
+  text-align: left;
+  color: #000000;
+  margin-left: 50%;
+}
+
+.contact img {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+
+.images {
+  margin-left: -180pt;
+  margin-top: 40pt;
+}
+
+iframe {
+  text-align: center;
+  padding: 50px;
+}
+
+.profile {
+  padding: 15px;
+  margin-top: 10pt;
+}
+
+
+.rating {
+  border: none;
+  margin-left: -45%;
+  width: 100%;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: #ddd;
+ float: right;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label { color: #e7a11b;  }
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label { color: #e7a11b;  }
+}
+
+
+.star-ratings-css-bottom {
+  padding: 0;
+  display: block;
+  z-index: 0;
+}
+.star-ratings-sprite {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  font-size: 0;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 110px;
+  margin: 0 auto;
+}
+.star-ratings-sprite-rating {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  background-position: 0 100%;
+  float: left;
+  height: 21px;
+  display: block;
+}
+
+.review p {
+  color: #FFF;
+  font-size: 12pt;
+  font-family: Quicksand;
+  position: relative;
+  top: 0;
+}
